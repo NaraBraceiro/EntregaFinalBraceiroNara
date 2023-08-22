@@ -1,0 +1,40 @@
+@import "var";
+
+
+header{
+    nav{
+        background-color:$color-primary;
+        
+        div{
+            a{
+                img{
+                    width: auto;
+                    height: 10rem;
+                    margin-left: 3rem;
+                }
+            }
+        }
+
+        div{
+            ul{
+                li{
+                    padding-left: 2rem;
+                    
+                    &:hover{
+                        font-size: $size_mediumtext;
+                        font-style: bold;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 576px) {
+        .nav-item .nav-link{
+            text-align: center;
+        }
+    
+}
+

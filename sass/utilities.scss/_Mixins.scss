@@ -1,0 +1,93 @@
+@mixin flexible ($dis, $direction, $corte, $just, $align){
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+// ej 
+// etiqueta{
+//     @include flexible (flex, row, nowrap, center, center)
+//     @include flexible (flex, column, nowrap, flex-start, flex-start) yo le agrego los valores que necesito
+// }
+
+// animaciones
+@mixin tracking-in-contract($duration: 2s, $timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)) {
+animation: tracking-in-contract $duration $timing-function both;
+}
+
+@keyframes tracking-in-contract {
+    0% {
+    letter-spacing: 1em;
+    opacity: 0;
+    }
+    40% {
+    opacity: 0.6;
+    }
+    100% {
+    letter-spacing: normal;
+    opacity: 1;
+    }
+}
+
+
+
+@mixin scale-up-center($duration: 1s, $timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000)) {
+animation: scale-up-center $duration $timing-function both;
+}
+
+@keyframes scale-up-center {
+    0% {
+    transform: scale(0.5);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+
+
+@mixin tracking-in-expand($duration: 2s, $timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)) {
+    animation: tracking-in-expand $duration $timing-function both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    }
+    40% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+  //:@include tracking-in-expand(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+// }
+
+
+@mixin animation-index ($duration: 3s, $timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)) {
+    animation: tracking-in-expand $duration $timing-function both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    }
+    40% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+  // Ejemplo:   @include animation-index(3s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+// }
+
+
+
+
+

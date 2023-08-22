@@ -1,0 +1,285 @@
+@import "var";
+@import "./utilities.scss/Mixins";
+
+// main{
+//     section{
+//     position: relative;
+//     width: 100%;
+//     padding:40px 100px;
+//         div{
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             font-size: $size_2;
+//             h2{
+//                 color: $color-principal-title;
+//                 font-size:$size_2;
+//                 @include tracking-in-expand(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+//             }
+//         }
+//     }
+// }
+
+    .contactUs{
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+    }
+
+    .contactUs .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $size_2;
+    }
+
+    .contactUs .title h2{
+    color: $color-principal-title;
+    font-size:$size_2;
+    @include tracking-in-expand(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+    }
+
+    .titleform{
+    font-size: $size_bigtext;
+    color:$color-secondary;
+    margin-left: 1rem;
+    }
+
+
+// grids areas
+
+
+    .form{
+    grid-area: form;
+    }
+
+    .info{
+    grid-area: info;
+    }
+
+    .map{
+    grid-area: map;
+    }
+
+    .contact{
+    padding: 40px;
+    background-color: $color-primary;
+    border-radius: 12px;
+    }
+
+
+    .box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+    margin-top: 20px;
+    }
+
+/* Form */
+
+    .formBox{
+    position: relative;
+    width: 100%;
+    }
+
+    .formBox .row50{
+    display: flex;
+    gap: 20px;
+    }
+
+
+    .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+    } 
+
+    .formBox .row100 .inputBox{
+    width: 100%;
+    }
+
+    .inputBox label{
+    color: $color-secondary;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 0.8rem;
+    font-weight: 400;
+    } 
+
+    .inputBox input{
+    padding: 10px;
+    font-size: $size_mediumtext;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+    outline: none;
+    }
+
+    .inputBox textarea{
+    padding: 10px;
+    font-size: $size_bigtext;
+    outline: none;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+    resize: none;
+    min-height: 390px;
+    margin-bottom: 10px;
+    }
+
+    .inputBox input[type=submit]{
+    background: $color-alternative;
+    color: $color-secondary;
+    border: none;
+    font-size: $size_mediumtext;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+    }
+
+    .inputBox ::placeholder{
+    color:$color-alternative2;
+    }
+
+/* info */
+    .info{
+    background:$color-terciary;
+    }
+
+    .info h3{
+    color: $color-alternative;
+    font-size: $size_bigtext;
+    margin: 20px;
+    }
+
+    .info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+
+    .info .infoBox div span{
+    min-width:40px;
+    height: 40px;
+    color: $color-text;
+    background: $color-alternative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $size_h2;
+    border-radius: 50%;
+    margin-right: 15px;
+    }
+    
+    .info .infoBox div p {
+    color: $color-alternative;
+    font-size: $size_mediumtext;
+    }
+    
+    .info .infoBox div a {
+    color: $color-alternative;
+    text-decoration: none;
+    font-size: $size_mediumtext;
+    }
+    
+    .sci{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .sci li{
+    list-style: none;
+    margin-right: 15px;
+    }
+    
+    .sci li a {
+    color: $color-alternative;
+    font-size: 2rem;
+    }
+    
+    .sci li a:hover{
+    color: $color-alternative2;
+    }
+    
+    .map {
+    padding: 0;
+    }
+    
+    .map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width:1023px){
+    
+    
+    .contactUs{
+    padding: 20px;
+    }
+    
+    .box{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "form"
+    "info"
+    "map";
+    }
+    
+    .map{
+    min-height: 300px;
+    }
+    
+    .formBox .row50{
+    display: flex;
+    gap:0;
+    flex-direction: column;
+    }
+    
+    .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    }
+    
+    .inputBox{
+    width: 100%;
+    }
+    
+    .contact{
+    padding: 30px;
+    }
+    
+    .map{
+    min-height: 300px;
+    padding: 0;
+    }
+    }
+    
+    @media screen and (min-width: 1024px) and (max-width: 1192px) {
+    .contactUs {
+        padding-left: 5rem;
+        padding-right: 7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

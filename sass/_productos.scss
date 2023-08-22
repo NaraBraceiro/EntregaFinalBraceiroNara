@@ -1,0 +1,106 @@
+@import "var";
+@import "./utilities.scss/Mixins";
+
+
+
+
+
+
+
+
+
+
+
+
+styles original
+.titleProductos{
+  margin-top: 4rem;
+  margin-left: 12rem;
+  font-size:$size_2;
+  color:$color-principal-title;
+  @include tracking-in-expand(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+  }
+
+  
+  
+  .textProductos{
+  margin-top: 1rem;
+  margin-left: 7.5rem;
+  margin-right: 6rem;
+  margin-bottom: 2rem;
+  color: $color-text;
+  }
+  
+
+  .card-title {
+  font-size: 1rem;
+  color: #89b0ae;
+  text-align: center;
+  }
+  
+  .card-text {
+  color: $color-text;
+  font-size:0.9rem;
+  }
+  
+  .card {
+  width: 18rem;
+  height: auto;
+  margin-bottom: 2rem;
+  }
+  
+  .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #264653;
+  }
+  
+
+  .price{
+    text-align: center;
+    justify-content:center;
+  }
+
+  @media screen and (max-width:768px){
+    .titleProductos{
+    margin-left: 3rem;
+    }
+
+    .textProductos{
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .card{
+    margin:2rem auto 2rem auto;
+    
+    }
+  }
+  
+
+
+    @media only screen and (min-width: 769px) and (max-width: 991px) {
+      .titleProductos{
+        margin-left: 5rem;
+      }
+
+      .textProductos{
+        margin-left: 5rem;
+        margin-right: 5rem;
+      }
+
+      .card{
+        margin:auto;
+        margin-bottom: 2rem;
+      }
+}
+
+    
+    
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .card {
+    margin-left: 5rem;
+    }
+  }
+

@@ -1,0 +1,42 @@
+@import "var";
+@import "./utilities.scss/Mixins";
+
+
+
+    .cardServicios{
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 30rem;
+    }
+
+    .card-titleServicios{
+    color:$color-principal-title;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    @include tracking-in-contract(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+    }
+
+
+    .list-group-item{
+    color:$color-text;
+    }      
+
+    #card-center{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .cardServicios img{
+    @include scale-up-center(1s, cubic-bezier(0.390, 0.575, 0.565, 1.000));
+    }
+
+    @media screen and (max-width: 480px) {
+        .cardServicios{
+            margin:2rem auto;
+            width: 20rem;
+        }
+    
+    }
