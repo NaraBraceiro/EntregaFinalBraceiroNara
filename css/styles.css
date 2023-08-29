@@ -943,6 +943,7 @@ a {
 
 }
 
+
 /* ----------------------------------------------------------------------------------------------------------- */
 /** estilos del html CARRITO **/
 
@@ -991,6 +992,10 @@ a {
   padding-right: 1.5rem;
   border-radius: 1rem;
   
+}
+
+.carrito-producto-titulo{
+  width: 175px;
 }
 
 .carrito-producto-titulo2{
@@ -1043,7 +1048,9 @@ a {
   padding: 1rem;
   color: #264653;
   text-transform: uppercase;
+  font-weight: bold;
   gap: 1rem;
+
 }
 
 .carrito-operaciones-comprar {
@@ -1062,3 +1069,87 @@ a {
 }
 
 
+/* sumar restar */
+.carrito-producto-cantidad {
+  display: flex;
+  align-items: center;
+}
+
+.carrito-cantidad-modificar {
+  margin: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border: 1.5px solid black;
+  font-weight: bold;
+  color: #264653;
+  cursor: pointer;
+}
+
+.carrito-cantidad {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+/* envio  */
+.container-envio{
+  margin-top: 2rem;
+  margin-left: 19rem;
+}
+
+.titulo-envio{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #264653;
+}
+
+.form-check{
+  border: 1px solid #c2dfe3;
+  width: 30rem;
+  height: 4rem;
+  margin-top: 1rem;
+  color: grey;
+  cursor:pointer;
+  padding-left: 3.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input{
+  margin-left: 1rem;
+}
+
+.form-check-label{
+  margin-left: 1.5rem;
+}
+
+label .form-check-label{
+  align-content: center;
+  justify-content: baseline
+}
+
+/*radio cuando no está seleccionado */
+.form-check-input[type="radio"]:not(:checked) {
+  background-color: #f7f7f7;
+}
+
+/*radio cuando está seleccionado */
+.form-check-input[type="radio"]:checked {
+  background-color: #89b0ae;
+  border-color: #89b0ae;
+}
+
+.container-comprar h5{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #264653;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.container-comprar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}

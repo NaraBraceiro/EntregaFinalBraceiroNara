@@ -45,9 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">CONTACTO</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a aria-hidden="true" class="nav-link" href="carrito.html"><i class="bi bi-cart"></i> </a>
-                        </li>
+                        </li> -->
 
                         </ul>
                     </div>
@@ -86,14 +86,14 @@
 
                 <div id="carrito-operaciones" class="carrito-operaciones disabled">
                     <div class="carrito-operaciones-left">
-                        <button class="carrito-operaciones-vaciar">VACIAR EL CARRITO</button>
+                        <button id = "carrito-operaciones-vaciar" class="carrito-operaciones-vaciar">VACIAR EL CARRITO</button>
                     </div>
                     <div class="carrito-operaciones-right">
                         <div class="carrito-operaciones-total">
-                            <p>Total:</p>
+                            <p>Total (sin envío):</p>
                             <p id="total"></p>
                         </div>
-                        <button class="carrito-operaciones-comprar">Iniciar compra</button>
+                        <!-- <button id ="carrito-operaciones-comprar" class="carrito-operaciones-comprar">Iniciar compra</button> -->
                     </div>
                 </div>
                 
@@ -102,6 +102,38 @@
 
         </main>
     </div>
+
+
+        <div class = container-envio >
+            <h3 class="titulo-envio">Elegí el método de envío:</h3>
+            <!-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Envío en moto (CABA) - $800
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Envío por correo Andreani - $1500
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                <label class="form-check-label" for="flexRadioDefault3">
+                    Retiro en el local - $0
+                </label>
+            </div> -->
+
+            <!-- <div class="container-comprar">
+                <h5>Total con Envio: </h5>
+                <button id ="carrito-operaciones-comprar" class="carrito-operaciones-comprar">Iniciar compra</button>
+            </div> -->
+        </div>
+
+
+
+
 
     <footer id="footer">
         <div class="social">
