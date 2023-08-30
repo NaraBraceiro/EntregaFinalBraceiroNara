@@ -1064,6 +1064,8 @@ a {
   margin-bottom: 16px;
 }
 
+
+
 .disabled {
   display: none;
 }
@@ -1138,18 +1140,15 @@ label .form-check-label{
   border-color: #89b0ae;
 }
 
-.container-comprar h5{
-  font-size: 1rem;
-  font-weight: bold;
-  color: #264653;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
 
 .container-comprar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
+  margin: 3rem 0 3rem 63rem;
 }
+
+/* formulario compra */
+
+.hidden {
+  display: none;
+}
+
+

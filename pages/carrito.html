@@ -90,7 +90,7 @@
                     </div>
                     <div class="carrito-operaciones-right">
                         <div class="carrito-operaciones-total">
-                            <p>Total (sin envío):</p>
+                            <p>Total (con envío):</p>
                             <p id="total"></p>
                         </div>
                         <!-- <button id ="carrito-operaciones-comprar" class="carrito-operaciones-comprar">Iniciar compra</button> -->
@@ -106,30 +106,82 @@
 
         <div class = container-envio >
             <h3 class="titulo-envio">Elegí el método de envío:</h3>
-            <!-- <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                <label class="form-check-label" for="flexRadioDefault1">
-                    Envío en moto (CABA) - $800
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                    Envío por correo Andreani - $1500
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-                <label class="form-check-label" for="flexRadioDefault3">
-                    Retiro en el local - $0
-                </label>
-            </div> -->
-
-            <!-- <div class="container-comprar">
-                <h5>Total con Envio: </h5>
-                <button id ="carrito-operaciones-comprar" class="carrito-operaciones-comprar">Iniciar compra</button>
-            </div> -->
+            <!-- esto se rellena con JS -->
         </div>
+
+        <div id="formulario-compra">
+            <form class="hidden">
+                <span> Entrega / Pago </span>
+
+                <h4>DATOS DEL DESTINATARIO</h4>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nombre y Apellido">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Teléfono">
+                    </div>
+
+                <h4>DOMICILIO DEL DESTINATARIO</h4>
+                    <div class="mb-3">
+                        <input type="adress" class="form-control" id="exampleFormControlInput4" placeholder="Calle">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Numero" >
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Departamento (Opcional)">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" id="name" class="form-control" id="exampleFormControlInput7" placeholder="Barrio (Opcional)">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput8" placeholder="Ciudad">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput9" placeholder="Código postal" >
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Provincia</option>
+                            <option value="1">Buenos Aires</option>
+                            <option value="2">Ciudad Autonoma de Buenos Aires</option>
+                            <option value="3">Catamarca</option>
+                            <option value="4">Chaco</option>
+                            <option value="5">Chubut</option>
+                            <option value="6">Córdoba</option>
+                            <option value="7">Corrientes</option>
+                            <option value="8">Entre Rios</option>
+                            <option value="9">Formosa</option>
+                            <option value="10">Jujuy</option>
+                            <option value="11">La Pampa</option>
+                            <option value="12">La Rioja</option>
+                            <option value="13">Mendoza</option>
+                            <option value="14">Misiones</option>
+                            <option value="15">Neuquén</option>
+                            <option value="16">Rio Negro</option>
+                            <option value="17">Salta</option>
+                            <option value="18">San Juan</option>
+                            <option value="19">San Luis</option>
+                            <option value="20">Santa Cruz</option>
+                            <option value="21">Santa Fe</option>
+                            <option value="22">Santiago del Estero</option>
+                            <option value="23">Tierra del Fuego </option>
+                            <option value="24">Tucumán</option>
+                        </select>
+                    </div>
+
+
+
+                <button type="submit">Realizar Compra</button>
+            </form>
+        </div>
+        
 
 
 
