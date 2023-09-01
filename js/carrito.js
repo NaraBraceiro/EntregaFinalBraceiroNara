@@ -79,7 +79,7 @@ function cargarProductosCarrito(){
     actualizarTotalCompra();
 }
 
-//escuchar eventos click en contenedorCarritoProductos
+//eventos click en contenedorCarritoProductos
 contenedorCarritoProductos.addEventListener("click", e => {
     if (e.target.classList.contains("carrito-cantidad-modificar")) {                                       //click en + o -
     const idProducto = e.target.parentElement.parentElement.querySelector(".carrito-producto-eliminar").id;
@@ -228,7 +228,7 @@ formularioCompraConfirmacion.addEventListener("submit", e => {
     // nro de orden random
     const numeroOrden = Math.floor(Math.random() * 1000000);
 
-    // Guardar los datos y nro orden en LS
+    // guardo los datos y nro orden en LS
     const data = Object.fromEntries(new FormData(e.target));
     data.numeroOrden = numeroOrden;
     localStorage.setItem("formData", JSON.stringify(data));
