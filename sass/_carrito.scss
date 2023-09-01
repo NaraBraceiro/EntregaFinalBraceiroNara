@@ -242,6 +242,7 @@ label .form-check-label{
 
 .btn-confirmar-compra{
     margin-left: 43rem;
+    margin-bottom: 3rem;
 }
 
 .form-aviso{
@@ -252,7 +253,7 @@ label .form-check-label{
     border-radius: 15px;
     // background-color:$color-primary;
     padding: 2rem 1rem;
-    width: 62rem;
+    width: 62.5rem;
     font-weight: bolder;
     font-size: $size_mediumtext;
     text-transform: uppercase;
@@ -263,3 +264,14 @@ label .form-check-label{
     display: none;
 
 }
+
+//swal fire
+.custom-swal-title{
+    color:$color-principal-title;
+}
+
+.custom-swal-text{
+color:grey;
+font-size: 0.5rem;
+}
+

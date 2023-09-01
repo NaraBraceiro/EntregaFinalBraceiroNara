@@ -71,8 +71,8 @@ function cargarProductosCarrito(){
             contenedorCarritoComprado.classList.add("disabled");
             contenedorCarritoOperaciones.classList.add("disabled");
             containerEnvio.classList.add("disabled");
-            containerEnvio.classList.add("disabled"); // Ocultar el contenedor de envío
-            formularioCompra.classList.add("disabled"); // Ocultar el formulario de compra
+            containerEnvio.classList.add("disabled"); // ocultar el div contenedor de envío
+            formularioCompra.classList.add("disabled"); // ocultar el formulario de compra
         }
 
     actualizarBotonesEliminar();
@@ -81,10 +81,10 @@ function cargarProductosCarrito(){
 
 //escuchar eventos click en contenedorCarritoProductos
 contenedorCarritoProductos.addEventListener("click", e => {
-    if (e.target.classList.contains("carrito-cantidad-modificar")) {  //click en + o -
+    if (e.target.classList.contains("carrito-cantidad-modificar")) {                                       //click en + o -
     const idProducto = e.target.parentElement.parentElement.querySelector(".carrito-producto-eliminar").id;
     
-    let cantidadCambio;                          //cantidadCambio: cuánto cambiara la Q de un producto: + (suma 1) - (resta 1)       
+    let cantidadCambio;                                    //cantidadCambio: cuánto cambiara la Q de un producto: + (suma 1) - (resta 1)       
     if (e.target.textContent === "+") {
         cantidadCambio = 1;
     } else {
@@ -220,57 +220,33 @@ actualizarTotalConEnvio();
 
 //evento al formulario de realizar compra
 
+const formularioCompraConfirmacion = document.querySelector("#formulario-compra");
 
-// const formularioCompraConfirmacion = document.querySelector("#formulario-compra").addEventListener("submit", e => {
-//     e.preventDefault();
-//     const data = Object.fromEntries(new FormData(e.target));
-
-//     // Guardar los datos en el localStorage
-//     localStorage.setItem("formData", JSON.stringify(data));
-
-
-//     Swal.fire({
-//         title: 'Tu mensaje fue enviado.',
-//         text: 'En breve nos contactaremos con vos para atender tu consulta',
-//         icon: 'success',
-//         customClass: {
-//             popup: 'custom-swal-popup',
-//             title: 'custom-swal-title',
-//             confirmButton: 'custom-swal-confirm-button'
-//         }
-//     });
-    
-// });
-
-
-const formularioCompraConfirmacion = document.querySelector("#formulario-compra").addEventListener("submit", e => {
+formularioCompraConfirmacion.addEventListener("submit", e => {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
 
     // nro de orden random
     const numeroOrden = Math.floor(Math.random() * 1000000);
 
-    // guardo los datos y número de orden en LS
-    const datosConNumeroOrden = {
-        ...data,
-        numeroOrden: numeroOrden
-    };
-    localStorage.setItem("formData", JSON.stringify(datosConNumeroOrden));
+    // Guardar los datos y nro orden en LS
+    const data = Object.fromEntries(new FormData(e.target));
+    data.numeroOrden = numeroOrden;
+    localStorage.setItem("formData", JSON.stringify(data));
 
-    // msj confirmación de compra
+    // msj de confirmación
 
     Swal.fire({
-        title: 'Tu compra fue realizada con éxito.',
-        text: `Número de orden: #${numeroOrden}.\n En breve nos contactaremos vos para informarte sobre el seguimiento de tu envío. ¡Gracias por comprar en Beauty Studio!`,
+        title: 'Tu pedido fue confirmado.',
+        text: `Número de orden: #${numeroOrden}.\nEn breve nos contactaremos para brindarte los datos de seguimiento. ¡Gracias por comprar en la tienda de Beauty Studio!.`,
         icon: 'success',
         customClass: {
             popup: 'custom-swal-popup',
             title: 'custom-swal-title',
+            text: 'custom-swal-text',
             confirmButton: 'custom-swal-confirm-button'
         }
     });
 });
-
 
 
 
