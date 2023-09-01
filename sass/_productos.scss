@@ -5,17 +5,9 @@
 
 
 
-
-
-
-
-
-
-
-styles original
 .titleProductos{
   margin-top: 4rem;
-  margin-left: 12rem;
+  margin-left: 7.5rem;
   font-size:$size_2;
   color:$color-principal-title;
   @include tracking-in-expand(2s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
@@ -62,47 +54,158 @@ styles original
     justify-content:center;
   }
 
-  @media screen and (max-width:768px){
-    .titleProductos{
-    margin-left: 3rem;
-    }
+  // @media screen and (max-width:768px){
+  //   .titleProductos{
+  //   margin-left: 3rem;
+  //   }
 
-    .textProductos{
-      margin-left: 3rem;
-      margin-right: 3rem;
-    }
+  //   .textProductos{
+  //     margin-left: 3rem;
+  //     margin-right: 3rem;
+  //   }
 
-    .card{
-    margin:2rem auto 2rem auto;
+  //   .card{
+  //   margin:2rem auto 2rem auto;
     
-    }
-  }
+  //   }
+  // }
   
 
 
-    @media only screen and (min-width: 769px) and (max-width: 991px) {
-      .titleProductos{
-        margin-left: 5rem;
-      }
+//     @media only screen and (min-width: 769px) and (max-width: 991px) {
+//       .titleProductos{
+//         margin-left: 5rem;
+//       }
 
-      .textProductos{
-        margin-left: 5rem;
-        margin-right: 5rem;
-      }
+//       .textProductos{
+//         margin-left: 5rem;
+//         margin-right: 5rem;
+//       }
 
-      .card{
-        margin:auto;
-        margin-bottom: 2rem;
-      }
+//       .card{
+//         margin:auto;
+//         margin-bottom: 2rem;
+//       }
+// }
+
+    
+    
+//   @media screen and (min-width: 992px) and (max-width: 1199px) {
+//     .card {
+//     margin-left: 5rem;
+//     }
+//   }
+
+
+/* estilos aside nav */
+
+ul {
+  list-style-type: none;
 }
 
-    
-    
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .card {
-    margin-left: 5rem;
-    }
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: $color-alternative3;
+}
+
+
+#aside-shop{
+  padding: 3rem;
+  padding-left: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-aside-shop{
+  margin-top: 4.5rem;
+  margin-left: 2.5rem;
+}
+
+.menu{
+  margin-top: 1rem;
+  display:flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.boton-menu{
+  background-color: transparent;
+  border:0;
+  color:#62929e;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  font-size: $size_mediumtext;
+
+}
+
+/* Estilos para el botón activo */
+.boton-menu.active {
+  color: $color-secondary;
+}
+
+/* Hover para resaltar los botones */
+.boton-menu:hover {
+  background-color: $color-principal-title;
+  color:$color-alternative3;
+}
+
+
+/* clase para sacarle estilos a los links */
+.unstyled-link{
+  color:$color-terciary;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* button */
+.producto-agregar{
+  font-size: $size_smallertext;
+  border: 0;
+  background-color: $color-principal-title;
+  color: $color-alternative3;
+  padding: .4rem;
+  text-transform: uppercase;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  border: 2px solid;
+  transition: background-color .2s, color .2s;
+}
+
+.producto-agregar:hover {
+  background-color: $color-terciary;
+  color: $color-alternative;
+}
+
+/* Estilos de las cards, que le sumo ya que no aplica la clase row de boostrap */
+.contenedor-productos {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+
+}
+
+
+// RESPONSIVE DESING:
+@media screen and (max-width: 675px) {
+  .contenedor-productos {
+      grid-template-columns: 1fr 1fr;
   }
-
-
+}
 

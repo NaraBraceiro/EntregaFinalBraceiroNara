@@ -273,7 +273,28 @@
 
 
 
+/* Estilos Swal */
+.custom-swal-popup {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
 
+
+  /*título Swal */
+.custom-swal-title {
+    color:#264653;
+    font-size: 1.5rem;
+}
+
+
+.custom-swal-confirm-button {
+    background-color: #62929e !important;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 

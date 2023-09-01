@@ -7,6 +7,11 @@
     <meta name="description" content="Contamos con productos de primera calidad para el cuidado de tu cabello y color">
     <meta name="keywords" content="Cabellos teñidos, acondicionador, hidratación, frizz, cabello suave, shampoo, bain, mascarillas, cabello seco, restacuración, nutrición, brillo, sin sulfatos">
     <title>Beauty Studio- Nuestros Productos</title>
+    <!-- favicon -->
+    <link rel="icon" href="../img/favicon-32x32.png" type="image/png">
+    <!-- toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,6 +80,7 @@
                 
             </nav>
         </aside>
+        
         <main>
             <h2 class="titulo-carrito">Mi carrito</h2>
             <div class="contenedor-carrito">
@@ -103,87 +109,119 @@
         </main>
     </div>
 
-
+    <div class="contenedor-formularios">
         <div class = container-envio >
             <h3 class="titulo-envio">Elegí el método de envío:</h3>
-            <!-- esto se rellena con JS -->
+            <!-- esto se rellena con JS --> 
         </div>
 
         <div id="formulario-compra">
-            <form class="hidden">
-                <span> Entrega / Pago </span>
-
-                <h4>DATOS DEL DESTINATARIO</h4>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@email.com">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nombre y Apellido">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Teléfono">
-                    </div>
-
-                <h4>DOMICILIO DEL DESTINATARIO</h4>
-                    <div class="mb-3">
-                        <input type="adress" class="form-control" id="exampleFormControlInput4" placeholder="Calle">
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Numero" >
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Departamento (Opcional)">
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="text" id="name" class="form-control" id="exampleFormControlInput7" placeholder="Barrio (Opcional)">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput8" placeholder="Ciudad">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput9" placeholder="Código postal" >
-                    </div>
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>Provincia</option>
-                            <option value="1">Buenos Aires</option>
-                            <option value="2">Ciudad Autonoma de Buenos Aires</option>
-                            <option value="3">Catamarca</option>
-                            <option value="4">Chaco</option>
-                            <option value="5">Chubut</option>
-                            <option value="6">Córdoba</option>
-                            <option value="7">Corrientes</option>
-                            <option value="8">Entre Rios</option>
-                            <option value="9">Formosa</option>
-                            <option value="10">Jujuy</option>
-                            <option value="11">La Pampa</option>
-                            <option value="12">La Rioja</option>
-                            <option value="13">Mendoza</option>
-                            <option value="14">Misiones</option>
-                            <option value="15">Neuquén</option>
-                            <option value="16">Rio Negro</option>
-                            <option value="17">Salta</option>
-                            <option value="18">San Juan</option>
-                            <option value="19">San Luis</option>
-                            <option value="20">Santa Cruz</option>
-                            <option value="21">Santa Fe</option>
-                            <option value="22">Santiago del Estero</option>
-                            <option value="23">Tierra del Fuego </option>
-                            <option value="24">Tucumán</option>
-                        </select>
-                    </div>
+            <form class="row g-3" id="hidden">
 
 
+                <h4 class="title-form">DATOS DE ENVÍO</h4>
+                <div class="col-12">
+                    <label for="formGroupExampleInput" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="EJ: Maria Diaz">
+                </div>
+                <div class="col-12">
+                    <label for="formGroupExampleInput2" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="EJ: Mariadiaz12@email.com">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label"> Domicilio </label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Av Juan Bautista Alberdi 2260">
+                </div>
+                <div class="col-md-5">
+                    <label for="inputCity" class="form-label">Localidad</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-5">
+                    <label for="inputStateProvincia" class="form-label">Provincia</label>
+                    <select id="inputStateProvincia" class="form-select">
+                        <option selected>Provincia</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Ciudad Autonoma de Buenos Aires</option>
+                        <option value="3">Catamarca</option>
+                        <option value="4">Chaco</option>
+                        <option value="5">Chubut</option>
+                        <option value="6">Córdoba</option>
+                        <option value="7">Corrientes</option>
+                        <option value="8">Entre Rios</option>
+                        <option value="9">Formosa</option>
+                        <option value="10">Jujuy</option>
+                        <option value="11">La Pampa</option>
+                        <option value="12">La Rioja</option>
+                        <option value="13">Mendoza</option>
+                        <option value="14">Misiones</option>
+                        <option value="15">Neuquén</option>
+                        <option value="16">Rio Negro</option>
+                        <option value="17">Salta</option>
+                        <option value="18">San Juan</option>
+                        <option value="19">San Luis</option>
+                        <option value="20">Santa Cruz</option>
+                        <option value="21">Santa Fe</option>
+                        <option value="22">Santiago del Estero</option>
+                        <option value="23">Tierra del Fuego </option>
+                        <option value="24">Tucumán</option>
+                    </select>
+                </div>
 
-                <button type="submit">Realizar Compra</button>
-            </form>
-        </div>
-        
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">CP</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="1234">
+                </div>
+                <h4 class="title-form">DATOS DE FACTURACIÓN</h4>
+                <div class="col-12">
+                    <label for="formGroupExampleInput" class="form-label">DNI o CUIL</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputdni" placeholder="32569877   27-32569877-0">
+                </div>
+                <div class="col-12">
+                    <label for="formGroupExampleInput" class="form-label">Numero de tarjeta (crédito o débito)</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputnrotarjeta" placeholder="4444 1234 5647 1234">
+                </div>
+                <div class="col-md-6">
+                    <label for="formGroupExampleInput" class="form-label">Titular de tarjeta</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputtittarjeta" placeholder="Maria E Diaz">
+                </div>
+                <div class="col-md-3">
+                    <label for="formGroupExampleInput" class="form-label">Vencimiento</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputvencimiento" placeholder="MM/AA">
+                </div>
+                <div class="col-md-3">
+                    <label for="formGroupExampleInput" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputcvv" placeholder="235">
+                </div>
+                <div class="col-12">
+                    <label for="inputState" class="form-label">Otros medios de pago: Efectivo / transferencia</label>
+                    <select id="inputState" class="form-select">
+                        <option selected></option>
+                        <option value="1">Efectivo</option>
+                        <option value="2">Tranferencia</option>
+                    </select>
 
+                    <p class="form-aviso"> <i class="bi bi-exclamation-circle-fill"></i> Si elegiste pago en efectivo o transferencia: al finalizar tu compra no olvides escribirnos a Infobeauty@gmail.com informando tu numero de orden y cuando vas a realizar el pago. Tené en cuenta que contas con un plazo de 48 hs hábiles para realizarlo, de lo contrario la compra será cancelada.</p>
+                </div>
 
+                <!-- <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        Mis datos de facturación y entrega son los mismos
+                        </label>
+                    </div>
+                    </div> -->
+
+                    <div class="col-12">
+                        <button type="submit" class="btn-confirmar-compra">Confirmar compra</button>
+                    </div>
+                <div>
+                    <h4>
+
+                    </h4>
+                </div>
+        </form> 
+    </div>
 
 
 
@@ -191,7 +229,7 @@
         <div class="social">
             <a href="https://www.whatsapp.com/" aria-hidden="true"><i class="bi bi-whatsapp"></i></a>
             <a href="https://es-la.facebook.com/" aria-hidden="true"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/"aria-hidden="true" ><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/" aria-hidden="true"><i class="bi bi-instagram"></i></a>
             <a href="https://ar.pinterest.com/" aria-hidden="true"><i class="bi bi-pinterest"></i></i></a>
         </div>
         <div>
@@ -212,12 +250,26 @@
                     <a href="./contacto.html">CONTACTO</a>
                 </li>
             </ul>
-        </div>
-        <p class="Copyright"> © 2023 Beauty Studio | Todos los derechos reservados.</p>
-    </footer>
+            </div>
+            <p class="Copyright"> © 2023 Beauty Studio | Todos los derechos reservados.</p>
+    </footer>                
+
+
+
+
+
+
+
+
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- javascript -->
     <script src="../js/carrito.js"></script>
     <!-- Boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </body> 
 </html>
